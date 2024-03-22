@@ -9,11 +9,8 @@
 let tasks = [];
 
 // Section 3: Cached Element References
-const taskForm = null;
-const taskTable = null;
-
-taskForm = document.getElementById('taskForm');
-taskTable = document.getElementById('taskTable');
+const taskForm = document.getElementById("taskForm");
+const taskTable = document.getElementById("taskTable");
 
 console.log(taskForm);
 console.log(taskTable);
@@ -26,11 +23,12 @@ function handleSubmission(event) {
     const taskDescription = document.getElementById('taskDescription').value
     const taskDeadline = document.getElementById('taskDeadline').value
     // TODO: Validate input fields
-    if (!taskDeadline && !taskName) {
+    if (taskName.trim() === '' || taskDeadline.trim() === '') {
         alert('Task name and deadline are required!')
+        return;
     }
     // TODO: Update the tasks array
-        tasks.push({ name: taskName, description: taskDescription, deadline: taskDeadline })
+    tasks.push({ name: taskName, description: taskDescription, deadline: taskDeadline })
     render();
 }
 

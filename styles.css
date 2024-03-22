@@ -16,12 +16,34 @@ body {
 }
 
 form {
-    text-align: center;
+    text-align: left;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    text-align: center;
 }
 
 
-#taskName, #taskDescription, #taskDeadline {
-    margin-bottom: 50px;
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px; /* Increase padding for a bigger button */
+    font-size: 16px; /* Adjust font size as needed */
+    background-color: #0074D9; /* Example background color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
